@@ -1,3 +1,9 @@
-# Your code goes here.
-# You can delete these comments, but do not change the name of this file
-# Write your code to expect a terminal of 80 characters wide and 24 rows high
+import random
+words_to_guess = ["animal", "dog", "cat", "Cucamber", "apple", "table", "kitchen", "Mushrooms"]
+
+def get_words(list):
+    asked_word = list[random.randrange(len(list))]
+    return asked_word
+
+word = get_words(words_to_guess)
+print(word)
