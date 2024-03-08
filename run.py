@@ -193,6 +193,9 @@ def start_menu():
                 raise ValueError("Your chosen Value is too big! You should choose number between 1 and 3")
             else:
                 if int(choice) == 1:
+                    print("\n")
+                    print("Before we begin..")
+                    player = input("...enter Your name:")
                     game()
                 elif int(choice) == 2:
                     print(INSTRUCTIONS)
