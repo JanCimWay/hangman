@@ -94,10 +94,11 @@ def replace_letter(hidden, visible, letter):
     in the place where should be the guessed letter.
     in case the guessed letter contains the word 
     """
+    guessed_letters.append(letter)
     num = 0
     for symb in visible:
-        if symb == letter:
-            hidden = hidden[:num] + letter + hidden[num + 1:]
+        if symb.upper() == letter.upper():
+            hidden = hidden[:num] + letter.upper() + hidden[num + 1:]
         num += 1
     return hidden
 
@@ -109,7 +110,7 @@ def status_bar(word, result, score):
     print(result)
     print(guessed_letters)
     print(HANGMANPICS[score])
-    print("You have made " + str(score) + "mistakes till now!")
+    print("You have made " + str(score) + " mistakes till now!")
     print("\n")
 
 def get_welcome_msg():
