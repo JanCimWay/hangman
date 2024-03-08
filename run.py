@@ -117,6 +117,12 @@ def get_welcome_msg():
     print("welcome")
 
 def game():
+    """
+    Clears the list of previosly guessed letters
+    Gets from user word, repalces it with hidden word, 
+    Guess by guess counts the mistakes of the user.
+    Updates the resul and gets it back.
+    """
     print("\n")
     del guessed_letters[:]
     get_welcome_msg()
