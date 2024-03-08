@@ -76,7 +76,7 @@ def guess_letter():
     """
     while True:
         try:
-            letter = input("Enter letter: \n")
+            letter = input("Enter letter: \n").upper()
             if letter.isalpha() is False:
                 raise ValueError ("Only latin letters are allowed!")
             elif len(letter) != 1:
