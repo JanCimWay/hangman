@@ -39,6 +39,11 @@ def guess_letter():
             print(e)
 
 def replace_letter(hidden, visible, letter):
+    """
+    Replace a symbol * in the hidden word,
+    in the place where should be the guessed letter.
+    in case the guessed letter contains the word 
+    """
     num = 0
     for symb in visible:
         if symb == letter:
