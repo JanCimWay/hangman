@@ -1,6 +1,56 @@
 import random
 words_to_guess = ["cucamber"]
 guessed_letters = ["u"]
+HANGMANPICS = ['''
+  +---+
+  |   |
+      |
+      |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+      |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+  |   |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+ /|   |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ /    |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ / \  |
+      |
+=========''']
 
 def get_words(list):
     """
@@ -51,39 +101,15 @@ def replace_letter(hidden, visible, letter):
         num += 1
     return hidden
 
-def main():
-    print("\n")
-    del guessed_letters[:]
-    #get_welcome_msg()
-    print("\n")
-    word = get_words(words_to_guess)
-    secret = hidden_word(word)
-    guess = guess_letter()
-    result = replace_letter(secret, word, guess)
-    mistakes = 0
-    if result == secret:
-        mistakes += 1
-    #status_bar(word, result, mistakes)
-    while mistakes < 6:
-        guess = guess_letter()
-        result = replace_letter(result, word, guess)
-        step_mistakes = 0
-        if result != word.upper():
-            for symb in word:
-                if symb.upper() != guessed_letters[-1].upper():
-                    step_mistakes += 1
-                    if step_mistakes == len(word):
-                        mistakes += 1
-            #status_bar(word, result, mistakes)
-        else:
-          print(word)
-          print("You won")
-          print("\n")
-          main()
-    print("You lost.. try one more time")
+def status_bar(word, result, score):
+    """
+    Status bar or result of game progress!
+    """
     print(word)
+    print(result)
+    print(guessed_letters)
+    print(HANGMANPICS[score])
+    print("You have made " + str(score) + "mistakes till now!")
     print("\n")
-    main()
 
 
-main()
