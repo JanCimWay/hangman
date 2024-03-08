@@ -218,6 +218,10 @@ def start_menu():
 
 
 def starting_window():
+    """
+    Function allowing to show the logo, 
+    just before game
+    """
     print(WELCOME)
     start_menu()
 
