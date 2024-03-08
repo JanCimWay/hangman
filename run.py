@@ -112,4 +112,7 @@ def status_bar(word, result, score):
     print("You have made " + str(score) + "mistakes till now!")
     print("\n")
 
+def get_welcome_msg():
+    print("welcome")
+
 
