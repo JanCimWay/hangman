@@ -136,7 +136,7 @@ def status_bar(word, result, score):
     print("\n")
 
 
-def game():
+def game(name):
     """
     Clears the list of previosly guessed letters
     Gets from user word, repalces it with hidden word, 
@@ -144,6 +144,7 @@ def game():
     Updates the resul and gets it back.
     """
     print("\n")
+    print(name + " I hope You are ready! Let's start!")
     del guessed_letters[:]
     print("\n")
     word = get_words(words_to_guess)
@@ -167,13 +168,13 @@ def game():
             status_bar(word, result, mistakes)
         else:
           print(word)
-          print("You won!")
+          print(name + " You won!")
           print("\n")
-          game()
-    print("You lost.. try one more time")
-    print(word)
+          game(name)
+    print("The right answer was " + word)
+    print(name + " You lost.. try one more time")
     print("\n")
-    game()
+    game(name)
 
 def start_menu():
     """
@@ -192,8 +193,8 @@ def start_menu():
                 if int(choice) == 1:
                     print("\n")
                     print("Before we begin..")
-                    player = input("...enter Your name:")
-                    game(name)
+                    player = input("...enter Your name:").upper()
+                    game(player)
                 elif int(choice) == 2:
                     print(INSTRUCTIONS)
                     start_menu()
