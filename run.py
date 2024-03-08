@@ -147,11 +147,14 @@ def game(name):
     print(name + " I hope You are ready! Let's start!")
     del guessed_letters[:]
     print("\n")
+    mistakes = 0
+    print(HANGMANPICS[mistakes])
+    print("\n")
     word = get_words(words_to_guess)
     secret = hidden_word(word)
     guess = guess_letter()
     result = replace_letter(secret, word, guess)
-    mistakes = 0
+    
     if result == secret:
       mistakes += 1
     status_bar(word, result, mistakes)
