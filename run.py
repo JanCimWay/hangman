@@ -52,6 +52,28 @@ HANGMANPICS = ['''
       |
 =========''']
 
+MENU = '''
+MENU
+
+To procced, You need to make Your choice.
+Press the button according to Your wishes:
+
+1 - Start the GAME
+2 - Read instructions
+3 - Quit
+
+'''
+
+INSTRUCTIONS = '''
+INSTRUCTIONS
+
+This game is called hangman.
+We will choose for You a word from a list and You will
+guess the word, letter by letter.
+Your goal is to sovle the puzzle till the man is hanged
+
+'''
+
 def get_words(list):
     """
     Get a random word from list of words
@@ -156,4 +178,25 @@ def game():
     print("\n")
     game()
 
-game()
+def start_menu():
+  while True:
+    print(MENU)
+    choice = input("Enter Your choice:")
+    ("\n")
+    try:
+      if not choice.isnumeric():
+          raise ValueError("This is not a number")
+      elif int(choice) > 3:
+          raise ValueError("Your chosen Value is too big! You should choose number between 1 and 3")
+      else:
+        if int(choice) == 1:
+          game()
+        elif int(choice) == 2:
+          print(INSTRUCTIONS)
+          start_menu()
+        else:
+          break
+    except ValueError as e:
+      print(e)
+
+start_menu()
