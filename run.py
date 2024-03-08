@@ -135,8 +135,6 @@ def status_bar(word, result, score):
     print("You have made " + str(score) + " mistakes till now!")
     print("\n")
 
-def get_welcome_msg():
-    print("welcome")
 
 def game():
     """
@@ -147,7 +145,6 @@ def game():
     """
     print("\n")
     del guessed_letters[:]
-    get_welcome_msg()
     print("\n")
     word = get_words(words_to_guess)
     secret = hidden_word(word)
@@ -196,7 +193,7 @@ def start_menu():
                     print("\n")
                     print("Before we begin..")
                     player = input("...enter Your name:")
-                    game()
+                    game(name)
                 elif int(choice) == 2:
                     print(INSTRUCTIONS)
                     start_menu()
