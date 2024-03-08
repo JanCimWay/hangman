@@ -74,6 +74,16 @@ Your goal is to sovle the puzzle till the man is hanged
 
 '''
 
+WELCOME = ''' 
+ _   _                                              
+| | | |                                              
+| |_| | __ _ _ __   __ _  __ _ _ __ ___   __ _ _ __  
+|  _  |/ _` | '_ \\ / _` |/ _` | '_ ` _ \\ / _` | '_ \\
+| | | | (_| | | | | (_| | (_| | | | | | | (_| | | | |
+\\_| |_/\\__,_|_| |_|\__, |\__,_|_| |_| |_|\\__,_|_| |_|
+                    __/ |                            
+                   |___/                             '''
+
 def get_words(list):
     """
     Get a random word from list of words
@@ -206,5 +216,9 @@ def start_menu():
         except ValueError as e:
             print(e)
 
-start_menu()
 
+def starting_window():
+    print(WELCOME)
+    start_menu()
+
+starting_window()
