@@ -116,4 +116,38 @@ def status_bar(word, result, score):
 def get_welcome_msg():
     print("welcome")
 
+def game():
+    print("\n")
+    del guessed_letters[:]
+    get_welcome_msg()
+    print("\n")
+    word = get_words(words_to_guess)
+    secret = hidden_word(word)
+    guess = guess_letter()
+    result = replace_letter(secret, word, guess)
+    mistakes = 0
+    if result == secret:
+      mistakes += 1
+    status_bar(word, result, mistakes)
+    while mistakes < (len(HANGMANPICS) - 1):
+        guess = guess_letter()
+        result = replace_letter(result, word, guess)
+        step_mistakes = 0
+        if result != word.upper():
+            for symb in word:
+                if symb.upper() != guessed_letters[-1].upper():
+                    step_mistakes += 1
+                    if step_mistakes == len(word):
+                        mistakes += 1
+            status_bar(word, result, mistakes)
+        else:
+          print(word)
+          print("You won!")
+          print("\n")
+          game()
+    print("You lost.. try one more time")
+    print(word)
+    print("\n")
+    game()
 
+game()
