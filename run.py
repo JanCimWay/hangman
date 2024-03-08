@@ -18,6 +18,12 @@ def hidden_word(answer):
     return hidden
 
 def guess_letter():
+    """
+    Get a symbol / letter input from user.
+    validate that it hasnt been used before 
+    validate that there is not more than one symbol entered
+    and entery is a letter
+    """
     while True:
         try:
             letter = input("Enter letter: \n")
