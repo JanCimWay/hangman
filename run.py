@@ -184,18 +184,18 @@ def start_menu():
     choice = input("Enter Your choice:")
     ("\n")
     try:
-      if not choice.isnumeric():
-          raise ValueError("This is not a number")
-      elif int(choice) > 3:
-          raise ValueError("Your chosen Value is too big! You should choose number between 1 and 3")
-      else:
-        if int(choice) == 1:
-          game()
-        elif int(choice) == 2:
-          print(INSTRUCTIONS)
-          start_menu()
+        if not choice.isnumeric():
+            raise ValueError("This is not a number")
+        elif int(choice) > 3:
+            raise ValueError("Your chosen Value is too big! You should choose number between 1 and 3")
         else:
-          break
+            if int(choice) == 1:
+                game()
+            elif int(choice) == 2:
+                print(INSTRUCTIONS)
+                start_menu()
+            else:
+                break
     except ValueError as e:
       print(e)
 
