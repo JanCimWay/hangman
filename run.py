@@ -1,5 +1,5 @@
 import random
-words_to_guess = ["animal", "dog", "cat", "Cucamber", "apple", "table", "kitchen", "Mushrooms"]
+words_to_guess = ["cucamber"]
 guessed_letters = []
 
 def get_words(list):
@@ -38,12 +38,19 @@ def guess_letter():
         except ValueError as e:
             print(e)
 
-guess_letter()
+def replace_letter(hidden, visible, letter):
+    num = 0
+    for symb in visible:
+        if symb == letter:
+            hidden = hidden[:num] + letter + hidden[num + 1:]
+        num += 1
+    return hidden
 
-"""
+
 word = get_words(words_to_guess)
-hidden = hidden_word(word)
-
+secret = hidden_word(word)
+letter = guess_letter()
+test = replace_letter(secret, word, letter)
 print(word)
-print(hidden)
-"""
+print(secret)
+print(test)
