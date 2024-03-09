@@ -273,7 +273,7 @@ def end_menu(name):
     """
     print(S_MENU)
     while True:
-        choice = input("Enter Your choice:")
+        choice = input("Enter Your choice: \n")
         ("\n")
         try:
             if not choice.isnumeric():
