@@ -183,11 +183,13 @@ def game(name):
                         mistakes += 1
             status_bar(word, result, mistakes)
         else:
-          print(word)
-          print(name + " You won!")
-          print("\n")
-          game(name)
-    print("The right answer was " + word)
+            status_bar(word, result, mistakes)
+            print("Correct! The right answer was " + word.upper())
+            print(name + " You won!")
+            print("\n")
+            game(name)
+    status_bar(word, result, mistakes)
+    print("The right answer was " + word.upper())
     print(name + " You lost.. try one more time")
     print("\n")
     game(name)
