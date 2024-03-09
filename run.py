@@ -230,14 +230,14 @@ def game(name):
             print(name + " You won!")
             print("--------------------------------------")
             print("\n")
-            end_menu()
+            end_menu(name)
     status_bar(word, result, mistakes)
     print("--------------------------------------")
     print("The right answer was " + word.upper())
     print(name + " You lost.. try one more time")
     print("--------------------------------------")
     print("\n")
-    end_menu()
+    end_menu(name)
 
 
 def start_menu():
@@ -267,7 +267,7 @@ def start_menu():
             print(e)
 
 
-def end_menu():
+def end_menu(name):
     """
     Menu when a game is finished, so used can decide what to do next
     """
@@ -282,7 +282,7 @@ def end_menu():
                 raise ValueError("Entered value should be between 1 or 2")
             else:
                 if int(choice) == 1:
-                    game(player)
+                    game(name)
                 break
         except ValueError as e:
             print(e)
