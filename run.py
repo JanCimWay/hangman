@@ -138,10 +138,14 @@ def status_bar(word, result, score):
     """
     Status bar or result of game progress!
     """
-    print(word)
+    print("\n")
+    print("YOUR CURRENT RESULT:")
     print(result)
-    print(guessed_letters)
+    print("\n")
     print(HANGMANPICS[score])
+    print("\n")
+    print("Letters You have guessed till now: " )
+    print(guessed_letters)
     print("You have made " + str(score) + " mistakes till now!")
     print("\n")
 
@@ -164,7 +168,6 @@ def game(name):
     secret = hidden_word(word)
     guess = guess_letter()
     result = replace_letter(secret, word, guess)
-    
     if result == secret:
       mistakes += 1
     status_bar(word, result, mistakes)
