@@ -32,6 +32,18 @@ Game finished, when the man is hanged or the word is answered.
     * Below the instructions - main menu is displayed for further possible navigation
 ![Navigation](/assets/images/features/instructions.JPG)
 
+* Players name entery
+    * to make more personal approach afterwards, user is asked to enter name
+![username](/assets/images/features/username.JPG)
+
+* Start game status
+    * A welcome message is displayed to player
+    * The hidden word is showed - letters are replaced with *
+    * In text there is written, how many letters player has to guess.
+    * "Empty" hangers are displayed
+    * User is asked to enter first letter
+![First game screen](/assets/images/features/first_game_screen.JPG)
+
 
 ### Furure features
 
