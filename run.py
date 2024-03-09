@@ -140,7 +140,7 @@ def guess_letter():
 
 def players_name():
     """
-    Get players name, limiting that only letters can be entered 
+    Get players name, limiting that only letters can be entered
     and num of symbols should be between 2 and 12
     """
     while True:
