@@ -33,22 +33,22 @@ HANGMANPICS = ['''
   +---+
   |   |
   O   |
- /|\  |
+ /|\\  |
       |
       |
 =========''', '''
   +---+
   |   |
   O   |
- /|\  |
+ /|\\  |
  /    |
       |
 =========''', '''
   +---+
   |   |
   O   |
- /|\  |
- / \  |
+ /|\\  |
+ / \\  |
       |
 =========''']
 
@@ -74,15 +74,16 @@ Your goal is to sovle the puzzle till the man is hanged
 
 '''
 
-WELCOME = ''' 
- _   _                                              
-| | | |                                              
-| |_| | __ _ _ __   __ _  __ _ _ __ ___   __ _ _ __  
+WELCOME = '''
+ _   _
+| | | |
+| |_| | __ _ _ __   __ _  __ _ _ __ ___   __ _ _ __
 |  _  |/ _` | '_ \\ / _` |/ _` | '_ ` _ \\ / _` | '_ \\
 | | | | (_| | | | | (_| | (_| | | | | | | (_| | | | |
-\\_| |_/\\__,_|_| |_|\__, |\__,_|_| |_| |_|\\__,_|_| |_|
-                    __/ |                            
+\\_| |_/\\__,_|_| |_|\\__, |\\__,_|_| |_| |_|\\__,_|_| |_|
+                    __/ |
                    |___/                             '''
+
 
 def get_words(list):
     """
@@ -90,6 +91,7 @@ def get_words(list):
     """
     asked_word = list[random.randrange(len(list))]
     return asked_word
+
 
 def hidden_word(answer):
     """
@@ -99,10 +101,11 @@ def hidden_word(answer):
     hidden = "*" * len(answer)
     return hidden
 
+
 def guess_letter():
     """
     Get a symbol / letter input from user.
-    validate that it hasnt been used before 
+    validate that it hasnt been used before
     validate that there is not more than one symbol entered
     and entery is a letter
     """
@@ -110,21 +113,22 @@ def guess_letter():
         try:
             letter = input("Enter letter: \n").upper()
             if letter.isalpha() is False:
-                raise ValueError ("Only latin letters are allowed!")
+                raise ValueError("Only latin letters are allowed!")
             elif len(letter) != 1:
-                raise ValueError ("You must enter only one symbol!")
+                raise ValueError("You must enter only one symbol!")
             elif letter in guessed_letters:
-                raise ValueError ("You have already used this letter for guess")
+                raise ValueError("You have already used this letter for guess")
             else:
                 return letter
         except ValueError as e:
             print(e)
 
+
 def replace_letter(hidden, visible, letter):
     """
     Replace a symbol * in the hidden word,
     in the place where should be the guessed letter.
-    in case the guessed letter contains the word 
+    in case the guessed letter contains the word
     """
     guessed_letters.append(letter)
     num = 0
@@ -133,6 +137,7 @@ def replace_letter(hidden, visible, letter):
             hidden = hidden[:num] + letter.upper() + hidden[num + 1:]
         num += 1
     return hidden
+
 
 def status_bar(word, result, score):
     """
@@ -145,7 +150,7 @@ def status_bar(word, result, score):
     print("\n")
     print(HANGMANPICS[score])
     print("\n")
-    print("Letters You have guessed till now: " )
+    print("Letters You have guessed till now: ")
     print(guessed_letters)
     print("You have made " + str(score) + " mistakes till now!")
     print("--------------------------------------")
@@ -155,9 +160,9 @@ def status_bar(word, result, score):
 def game(name):
     """
     Clears the list of previosly guessed letters
-    Gets from user word, repalces it with hidden word, 
+    Gets from user word, replaces it with hidden word,
     Guess by guess counts the mistakes of the user.
-    Updates the resul and gets it back.
+    Updates the result and gets it back.
     """
     print("\n")
     print(name + " I hope You are ready! Let's start!")
@@ -171,7 +176,7 @@ def game(name):
     guess = guess_letter()
     result = replace_letter(secret, word, guess)
     if result == secret:
-      mistakes += 1
+        mistakes += 1
     status_bar(word, result, mistakes)
     while mistakes < (len(HANGMANPICS) - 1):
         guess = guess_letter()
@@ -186,15 +191,20 @@ def game(name):
             status_bar(word, result, mistakes)
         else:
             status_bar(word, result, mistakes)
+            print("--------------------------------------")
             print("Correct! The right answer was " + word.upper())
             print(name + " You won!")
+            print("--------------------------------------")
             print("\n")
             game(name)
     status_bar(word, result, mistakes)
+    print("--------------------------------------")
     print("The right answer was " + word.upper())
     print(name + " You lost.. try one more time")
+    print("--------------------------------------")
     print("\n")
     game(name)
+
 
 def start_menu():
     """
@@ -208,7 +218,7 @@ def start_menu():
             if not choice.isnumeric():
                 raise ValueError("This is not a number")
             elif int(choice) > 3:
-                raise ValueError("Your chosen Value is too big! You should choose number between 1 and 3")
+                raise ValueError("Entered value should be between 1 and 3")
             else:
                 if int(choice) == 1:
                     print("\n")
@@ -226,10 +236,11 @@ def start_menu():
 
 def starting_window():
     """
-    Function allowing to show the logo, 
+    Function allowing to show the logo,
     just before game
     """
     print(WELCOME)
     start_menu()
+
 
 starting_window()
