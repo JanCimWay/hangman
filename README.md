@@ -25,15 +25,18 @@ Game finished, when the man is hanged or the word is answered.
 * Welcome message and start menu
     * Game logo is displayed on the top
     * Starting menu is offered to user - to start game, quit game or read instructions
+
 ![Start screen](/assets/images/features/startscr.JPG)
 
 * Instructions
     * Displayed short game instructions to customer
     * Below the instructions - main menu is displayed for further possible navigation
+
 ![Navigation](/assets/images/features/instructions.JPG)
 
 * Players name entery
     * to make more personal approach afterwards, user is asked to enter name
+
 ![username](/assets/images/features/username.JPG)
 
 * Start game status
@@ -42,8 +45,35 @@ Game finished, when the man is hanged or the word is answered.
     * In text there is written, how many letters player has to guess.
     * "Empty" hangers are displayed
     * User is asked to enter first letter
+
 ![First game screen](/assets/images/features/first_game_screen.JPG)
 
+* Next letter guessing
+    * Hidden word is updated with right answered letters
+    * Updated status of hangers is displayed
+    * List of already guessed letters, is displayed
+    * Information, how many tries player has left is indicated on the screen
+
+![Next guess screen](/assets/images/features/next_guess.JPG)
+
+* Winners screen
+    * Message that game has been won.
+    * Confirming, what was the right word
+    * Below is displayed small menu for further navigation
+
+![Winners screen](/assets/images/features/win_screen.JPG)
+
+* Lost game screen
+    * Hanging man is showed
+    * User sees that no lives has left
+    * Personal (with players name) message is displayed to inform that game is lost
+
+![Lost game screen](/assets/images/features/lost_game.JPG)
+
+* Small menu
+    * After won or lost game small menue is given for user to choose - play another game or quit
+
+![Small menu](/assets/images/features/small_menu.JPG)
 
 ### Furure features
 
