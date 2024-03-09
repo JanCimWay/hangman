@@ -176,7 +176,7 @@ def status_bar(word, result, score):
     print("\n")
     print("Letters You have guessed till now: ")
     print(guessed_letters)
-    print("You have made " + str(score) + " mistakes till now!")
+    print("You have still " + str(len(HANGMANPICS) - score - 1) + " lives!")
     print("--------------------------------------")
     print("\n")
 
