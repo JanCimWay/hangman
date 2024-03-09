@@ -216,14 +216,14 @@ def start_menu():
     """
     Start menu giving choice for user how to proceed
     """
+    print(MENU)
     while True:
-        print(MENU)
         choice = input("Enter Your choice:")
         ("\n")
         try:
             if not choice.isnumeric():
                 raise ValueError("This is not a number")
-            elif int(choice) > 3:
+            elif int(choice) < 1 or int(choice) > 3:
                 raise ValueError("Entered value should be between 1 and 3")
             else:
                 if int(choice) == 1:
