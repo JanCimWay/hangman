@@ -70,6 +70,14 @@ Press the button according to Your wishes:
 
 '''
 
+S_MENU = '''
+
+What do You want to do next?
+Press "1" to start new game
+Press "2" to quit
+
+'''
+
 INSTRUCTIONS = '''
 INSTRUCTIONS
 
@@ -194,7 +202,7 @@ def game(name):
     print("\n")
     print(name + " I hope You are ready! Let's start!")
     print(secret)
-    print("Word has " + str(len(secret)) + " letters!")
+    print("Word, You have to guess has " + str(len(secret)) + " letters!")
     print("\n")
     mistakes = 0
     print(HANGMANPICS[mistakes])
@@ -222,14 +230,14 @@ def game(name):
             print(name + " You won!")
             print("--------------------------------------")
             print("\n")
-            game(name)
+            end_menu()
     status_bar(word, result, mistakes)
     print("--------------------------------------")
     print("The right answer was " + word.upper())
     print(name + " You lost.. try one more time")
     print("--------------------------------------")
     print("\n")
-    game(name)
+    end_menu()
 
 
 def start_menu():
@@ -254,6 +262,27 @@ def start_menu():
                 elif int(choice) == 2:
                     print(INSTRUCTIONS)
                     start_menu()
+                break
+        except ValueError as e:
+            print(e)
+
+
+def end_menu():
+    """
+    Menu when a game is finished, so used can decide what to do next
+    """
+    print(S_MENU)
+    while True:
+        choice = input("Enter Your choice:")
+        ("\n")
+        try:
+            if not choice.isnumeric():
+                raise ValueError("This is not a number")
+            elif int(choice) < 1 or int(choice) > 3:
+                raise ValueError("Entered value should be between 1 or 2")
+            else:
+                if int(choice) == 1:
+                    game(player)
                 break
         except ValueError as e:
             print(e)
