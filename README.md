@@ -159,7 +159,6 @@ For data validation was used [CI Python Linter](https://pep8ci.herokuapp.com/#).
 | Next letter entery | no | update hangman "image" | update hangman "image"  | Yes |
 | Lost game | no | load players current result - word with unhidden guessed letters | load players current result - word with unhidden guessed letters | Yes |
 | Lost game | no | hanged man "image" | hanged man "image" | Yes |
-
 | Lost game | no | show "The right answer was" + word | show "The right answer was PINAPPLE | Yes |
 | Lost game | no | show small menu | show small menu | Yes |
 | Small menu | a | This is not a number | This is not a number | Yes |
