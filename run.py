@@ -147,7 +147,6 @@ def status_bar(word, result, score):
     """
     print("\n")
     print("--------------------------------------")
-    print(word)
     print("YOUR CURRENT RESULT:")
     print(result)
     print("\n")
