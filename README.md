@@ -75,6 +75,21 @@ Game finished, when the man is hanged or the word is answered.
 
 ![Small menu](/assets/images/features/small_menu.JPG)
 
+* Input validation in menu´s
+    * User input is validated, to be sure that user can not enter number too small, too big or to input other symbol 
+
+![Input validation in menu](/assets/images/features/valid_exampl_num.JPG)
+
+* Letter input validation
+    * User input is validated, to be sure that user can not enter number, or string that would be too long 
+
+![Letter input validation](/assets/images/features/letter_entery.JPG)
+
+* Players name validation
+    * User input is validated with limit of 2 - 12 symbols. And no numbers are allowed
+
+![Players name validation](/assets/images/features/username_validation.JPG)
+
 ### Furure features
 
 * add additional words in list
