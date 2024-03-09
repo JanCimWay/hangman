@@ -1,6 +1,8 @@
 import random
-words_to_guess = ["cucamber"]
-guessed_letters = ["u"]
+words_to_guess = ["Cucamber", "Pinapple", "Banana", "Melon",
+"Papaya", "Mango", "Carrot", "Potatoe", "Orange", "Pear",
+"Tomatoe", "Cabage"]
+guessed_letters = []
 HANGMANPICS = ['''
   +---+
   |   |
@@ -145,6 +147,7 @@ def status_bar(word, result, score):
     """
     print("\n")
     print("--------------------------------------")
+    print(word)
     print("YOUR CURRENT RESULT:")
     print(result)
     print("\n")
