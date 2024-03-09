@@ -139,6 +139,7 @@ def status_bar(word, result, score):
     Status bar or result of game progress!
     """
     print("\n")
+    print("--------------------------------------")
     print("YOUR CURRENT RESULT:")
     print(result)
     print("\n")
@@ -147,6 +148,7 @@ def status_bar(word, result, score):
     print("Letters You have guessed till now: " )
     print(guessed_letters)
     print("You have made " + str(score) + " mistakes till now!")
+    print("--------------------------------------")
     print("\n")
 
 
