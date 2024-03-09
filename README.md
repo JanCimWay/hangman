@@ -96,19 +96,95 @@ Game finished, when the man is hanged or the word is answered.
 * add a possiblity for user to choose words from few lists by criteria as topic
 * players statistics - winned and lost games
 
-# Technologies used
+## Technologies used
 
 * Python
 
-# Frameworks, Libraries & Programs Used
+## Frameworks, Libraries & Programs Used
 
 * [Gitpod](https://www.gitpod.io/) for writing final code
-* [GitHub] (https://github.com/) for storage of app
+* [GitHub](https://github.com/) for storage of app
 * [Trinket](https://trinket.io/) for quick tests of code
 * [Python tutor](https://pythontutor.com/) for visual debugging
 * [Figma](https://www.figma.com/) for drawing flowchart
 * [Am I responsive](https://ui.dev/amiresponsive) used for the mockup picture of readme file
 * [CI Python Linter](https://pep8ci.herokuapp.com/#) used for code validation
+* [ASCII Art Generator](https://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20) to create welcome message
 
+## Testing
 
+### Validation testing
+
+For data validation was used [CI Python Linter](https://pep8ci.herokuapp.com/#). All the indicated errors were corrected.
+
+![No errors](/assets/images/no_errors.JPG)
+
+### Manual testing
+
+| Step | Input | Expected result | Received | Completed? |
+| ---- | ----- | --------------- | -------- | ------ |
+| Start screen | no | Showed logo | Showed logo | Yes |
+| Start screen | no | Menu loaded | Menu loaded | Yes |
+| Start menu | " " | This is not a number | This is not a number | Yes |
+| Start menu | empty | This is not a number | This is not a number | Yes |
+| Start menu | a | This is not a number | This is not a number | Yes |
+| Start menu | 1234 | Entered value should be between 1 and 3 | Entered value should be between 1 and 3 | Yes |
+| Start menu | 0 | Entered value should be between 1 and 3 | Entered value should be between 1 and 3 | Yes |
+| Start menu | 3 | Game quited | Game quited | Yes |
+| Start menu | 2 | Instructions loaded | Instructions loaded | Yes |
+| Start menu | 1 | Game loaded | Game loaded | Yes |
+| Instructions menu | 3 | Game quited | Game quited | Yes |
+| Instructions menu | 1 | Game loaded | Game loaded | Yes |
+| Game | no | load request of name at beginning | load request of name at beginning | Yes |
+| Name entery | 1 | Only latin letters are allowed! | Only latin letters are allowed! | Yes |
+| Name entery | 0 | Only latin letters are allowed! | Only latin letters are allowed! | Yes |
+| Name entery | a | Sign limit! Use 2 to 12 signs | Sign limit! Use 2 to 12 signs | Yes |
+| Name entery | Alexander the Great | Only latin letters are allowed! | Only latin letters are allowed! | Yes |
+| Name entery | Janis | result accepted, moved to next step | result accepted, moved to next step | Yes |
+| Game first step | no | Load welcome letter with players name | Load welcome letter with players name | Yes |
+| Game first step | no | Load hidden word - letters replaced with * | Load hidden word - letters replaced with * | Yes |
+| Game first step | no | Show to user the number of hidden letters | Show to user the number of hidden letters | Yes |
+| Game first step | no | Show first hangman from list | Show first hangman from list | Yes |
+| Game first step | no | Ask for letter entery | Ask for letter entery | Yes |
+| Letter entery | 1 | Only latin letters are allowed! | Only latin letters are allowed! | Yes |
+| Letter entery | as | You must enter only one symbol! | You must enter only one symbol! | Yes |
+| Letter entery | a | move to next step | move to next step | Yes |
+| Status bar | no | show current result - hidden word with unhiden already answered letters. (Entered letter A) | show current result - hidden word with unhiden already answered letters(Entered letter A - and it was replaced in the list of *) | Yes |
+| Status bar | no | show hanged man status | show hanged man status | Yes |
+| Status bar | no | show already guessed letters | Letters You have guessed till now ['A'] | Yes |
+| Status bar | no | show how many tries are left | You have still 6 lives | Yes |
+| Repeated entery of same letter | a | you have already used this letter for guess | you have already used this letter for guess | Yes |
+| Repeated entery of same letter.upper() | A | you have already used this letter for guess | you have already used this letter for guess | Yes |
+| Lost game | no | load players current result - word with unhidden guessed letters | load players current result - word with unhidden guessed letters | Yes |
+| Lost game | no | hanged man "image" | hanged man "image" | Yes |
+
+| Lost game | no | hanged man "image" | hanged man "image" | Yes |
+
+| Lost game | no | show "The right answer was" + word | show "The right answer was PINAPPLE | Yes |
+| Lost game | no | show small menu | show small menu | Yes |
+| Small menu | a | This is not a number | This is not a number | Yes |
+| Small menu | 0 | Entered value should be between 1 and 2 | Entered value should be between 1 and 2 | Yes |
+| Small menu | 15 | Entered value should be between 1 and 2 | Entered value should be between 1 and 2 | Yes |
+| Small menu | 1 | restart the game | restart the game | Yes |
+| Small menu | 2 | quit the game | quit the game | Yes |
+| Win game | no | congatulation message with players name | congatulation message with players name | Yes |
+| Win game | no | congatulation message with players name | congatulation message with players name | Yes |
+| Win game | no | show small menu | show small menu | Yes |
+
+## Credits
+
+* Mentor Mitko Bachvarov
+    * support for generating ideas to fulfill project
+    * support for problem solving
+    * encourage and motivation!
+
+### Code
+
+* [Python essentials template](https://github.com/Code-Institute-Org/python-essentials-template) by [Code insitute](https://codeinstitute.net/global/) 
+* Slack comunity
+* Code insitute lecture materials
+* [w3schools](https://www.w3schools.com/) for repeating clarafication for some functions
+* [Python documentation](https://docs.python.org/3/tutorial/errors.html) for understanding in detail "Errors and Exceptions"
+* [Programiz](https://www.programiz.com/) for explaining .isnumeric() and .isalpha() methods
+* [Stackowerflow](https://stackoverflow.com/) for readme file table formating
 
