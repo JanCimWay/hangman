@@ -234,8 +234,7 @@ def start_menu():
                 elif int(choice) == 2:
                     print(INSTRUCTIONS)
                     start_menu()
-                else:
-                    break
+                break
         except ValueError as e:
             print(e)
 
