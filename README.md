@@ -171,6 +171,16 @@ For data validation was used [CI Python Linter](https://pep8ci.herokuapp.com/#).
 | Win game | no | congatulation message with players name | congatulation message with players name | Yes |
 | Win game | no | show small menu | show small menu | Yes |
 
+### Solved bugs
+
+* in the start menu there was a problem that menu accepted value 0, as the criteria was only that value can not be bigger as 3. Solved by adding, that value can not be as well smaller as 1
+* If user went to "instructions" and there in the menu choose "quit", then he would firstly repeatedly see the main menu and he would have to press 3 one more time. It was solved by removing else in if function and "brake" moving right under if function
+* If at the first step user made a mistake, it was not accepted as mistake, because of syntax error. It was assigned with == (mistakes == 1), the problem was solved by replacing == with +=
+
+### Remaining bugs
+
+* All bugs have been solved
+
 ## Credits
 
 * Mentor Mitko Bachvarov
