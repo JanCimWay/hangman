@@ -1,8 +1,10 @@
 import random
-words_to_guess = ['Cucamber', 'Pinapple',
-'Banana', 'Melon', 'Papaya', 'Mango',
-'Carrot', 'Potatoe', 'Orange', 'Pear',
-'Tomatoe', 'Cabage', "Onion"]
+words_to_guess = ['''
+Cucamber''', '''Pinapple''', '''Banana''', '''
+Melon''', '''Papaya''', '''Mango''', '''
+Carrot''', '''Potatoe''', '''Orange''', '''
+Pear''', '''Tomatoe''', '''Cabage''', '''
+Onion''']
 
 guessed_letters = []
 HANGMANPICS = ['''
