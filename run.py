@@ -223,7 +223,7 @@ def start_menu():
                 if int(choice) == 1:
                     print("\n")
                     print("Before we begin..")
-                    player = input("...enter Your name:").upper()
+                    player = input("...enter Your name:\n").upper()
                     game(player)
                 elif int(choice) == 2:
                     print(INSTRUCTIONS)
