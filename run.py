@@ -130,6 +130,24 @@ def guess_letter():
             print(e)
 
 
+def players_name():
+    """
+    Get players name, limiting that only letters can be entered 
+    and num of symbols should be between 2 and 12
+    """
+    while True:
+        try:
+            player = input("...enter Your name:\n").upper()
+            if player.isalpha() is False:
+                raise ValueError("Only latin letters are allowed!")
+            elif len(player) <= 2 or len(player) >= 12:
+                raise ValueError("Sign limit! Use 2 to 12 signs")
+            else:
+                return player
+        except ValueError as e:
+            print(e)
+
+
 def replace_letter(hidden, visible, letter):
     """
     Replace a symbol * in the hidden word,
@@ -229,7 +247,7 @@ def start_menu():
                 if int(choice) == 1:
                     print("\n")
                     print("Before we begin..")
-                    player = input("...enter Your name:\n").upper()
+                    player = players_name()
                     game(player)
                 elif int(choice) == 2:
                     print(INSTRUCTIONS)
