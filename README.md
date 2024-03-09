@@ -187,6 +187,30 @@ For data validation was used [CI Python Linter](https://pep8ci.herokuapp.com/#).
     * support for problem solving
     * encourage and motivation!
 
+## Deployment
+
+* Open heroku (+ login)
+* On the start screen push button "New" and choose "Create a new app"
+* Input app name (unique for heroku)
+* Choose Your region
+* Click "Create app"
+* After app page opens - open settings tab
+* Find "Config Var section"
+    * in the field "KEY" enter "CREDS"
+    * in the field "VALUE" enter content of creds.json file
+    * click "Add"
+* Move to section "Buildpacks" in the setting page
+    * Click "Add buildpack"
+    * Add "Python" + push save changes
+    * Add "nodejs" + push save changes
+* Go to "Deploy section"
+* Select deployment method "Github"
+* Click "Connect to Github"
+* Search for github repository name
+* in the buttom of page push "Deploy branch"
+
+
+
 ### Code
 
 * [Python essentials template](https://github.com/Code-Institute-Org/python-essentials-template) by [Code insitute](https://codeinstitute.net/global/) 
