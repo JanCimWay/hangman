@@ -188,15 +188,17 @@ def game(name):
     Guess by guess counts the mistakes of the user.
     Updates the result and gets it back.
     """
+    del guessed_letters[:]
+    word = get_words(words_to_guess)
+    secret = hidden_word(word)
     print("\n")
     print(name + " I hope You are ready! Let's start!")
-    del guessed_letters[:]
+    print(secret)
+    print("Word has " + str(len(secret)) + " letters!")
     print("\n")
     mistakes = 0
     print(HANGMANPICS[mistakes])
     print("\n")
-    word = get_words(words_to_guess)
-    secret = hidden_word(word)
     guess = guess_letter()
     result = replace_letter(secret, word, guess)
     if result == secret:
