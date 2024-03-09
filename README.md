@@ -155,9 +155,9 @@ For data validation was used [CI Python Linter](https://pep8ci.herokuapp.com/#).
 | Status bar | no | show how many tries are left | You have still 6 lives | Yes |
 | Repeated entery of same letter | a | you have already used this letter for guess | you have already used this letter for guess | Yes |
 | Repeated entery of same letter.upper() | A | you have already used this letter for guess | you have already used this letter for guess | Yes |
+| Next letter entery | no | update how many tries still user has | update how many tries still user has | Yes |
+| Next letter entery | no | update hangman "image" | update hangman "image"  | Yes |
 | Lost game | no | load players current result - word with unhidden guessed letters | load players current result - word with unhidden guessed letters | Yes |
-| Lost game | no | hanged man "image" | hanged man "image" | Yes |
-
 | Lost game | no | hanged man "image" | hanged man "image" | Yes |
 
 | Lost game | no | show "The right answer was" + word | show "The right answer was PINAPPLE | Yes |
