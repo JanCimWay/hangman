@@ -17,3 +17,24 @@ Game finished, when the man is hanged or the word is answered.
 ## Flowchart
 
 ![Process fowchart](/assets/images/flowchart.jpg)
+
+## Features
+
+### Existing features
+
+* Welcome message and start menu
+    * Game logo is displayed on the top
+    * Starting menu is offered to user - to start game, quit game or read instructions
+![Start screen](/assets/images/features/startscr.JPG)
+
+* Instructions
+    * Displayed short game instructions to customer
+    * Below the instructions - main menu is displayed for further possible navigation
+![Navigation](/assets/images/features/instructions.JPG)
+
+
+### Furure features
+
+* add additional words in list
+* add a possiblity for user to choose words from few lists by criteria as topic
+* players statistics - winned and lost games
