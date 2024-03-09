@@ -90,8 +90,25 @@ Game finished, when the man is hanged or the word is answered.
 
 ![Players name validation](/assets/images/features/username_validation.JPG)
 
-### Furure features
+### Future features
 
 * add additional words in list
 * add a possiblity for user to choose words from few lists by criteria as topic
 * players statistics - winned and lost games
+
+# Technologies used
+
+* Python
+
+# Frameworks, Libraries & Programs Used
+
+* [Gitpod](https://www.gitpod.io/) for writing final code
+* [GitHub] (https://github.com/) for storage of app
+* [Trinket](https://trinket.io/) for quick tests of code
+* [Python tutor](https://pythontutor.com/) for visual debugging
+* [Figma](https://www.figma.com/) for drawing flowchart
+* [Am I responsive](https://ui.dev/amiresponsive) used for the mockup picture of readme file
+* [CI Python Linter](https://pep8ci.herokuapp.com/#) used for code validation
+
+
+
