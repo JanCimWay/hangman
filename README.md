@@ -180,13 +180,6 @@ For data validation was used [CI Python Linter](https://pep8ci.herokuapp.com/#).
 
 * All bugs have been solved
 
-## Credits
-
-* Mentor Mitko Bachvarov
-    * support for generating ideas to fulfill project
-    * support for problem solving
-    * encourage and motivation!
-
 ## Deployment
 
 * Open heroku (+ login)
@@ -209,7 +202,12 @@ For data validation was used [CI Python Linter](https://pep8ci.herokuapp.com/#).
 * Search for github repository name
 * in the buttom of page push "Deploy branch"
 
+## Credits
 
+* Mentor Mitko Bachvarov
+    * support for generating ideas to fulfill project
+    * support for problem solving
+    * encourage and motivation!
 
 ### Code
 
